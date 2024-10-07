@@ -152,7 +152,7 @@ class Listview2 extends StatelessWidget {
                           Text(
                             dataList[index]['time'],
                             style: const TextStyle(
-                                color: Colors.grey, fontSize: 16),
+                                color: Colors.grey, fontSize: 14),
                           ),
                         ],
                       ),

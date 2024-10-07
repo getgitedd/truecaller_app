@@ -68,21 +68,23 @@ class DetailScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20), // Add some spacing
-
-              // Phone information box with incoming call and message icons
+              SizedBox(height: 20),
               _buildInfoBox(Icons.call, phone, 'BSNL', showIcons: true),
-              SizedBox(height: 20), // Add some spacing
-
-              // First additional info box with location icon, without icons
+              SizedBox(height: 20),
               _buildInfoBox(Icons.location_on, 'More info available',
                   'Upgrade to premium to view more',
                   showIcons: false),
-              SizedBox(height: 1), // Add some spacing
-
-              // Second additional info box with email icon, without icons
+              SizedBox(height: 1),
               _buildInfoBox(Icons.email, 'Email available',
                   'Upgrade to premium to view more',
+                  showIcons: false),
+              SizedBox(height: 20),
+              _buildInfoBox(Icons.call, '16:57', 'Outgoing', showIcons: false),
+              SizedBox(height: 1),
+              _buildInfoBox(Icons.call, 'Yesterday  17:49  ', 'Incoming',
+                  showIcons: false),
+              SizedBox(height: 1),
+              _buildInfoBox(Icons.call, 'Yesterday  19:49  ', 'Incoming',
                   showIcons: false),
             ],
           ),

@@ -69,7 +69,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
                     height: 15,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.red,
+                      color: Colors.blue,
                     ),
                     child: const Center(
                       child: Text(

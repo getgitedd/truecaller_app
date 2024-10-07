@@ -47,7 +47,7 @@ class PageViewExample extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.6,
       child: PageView(
         pageSnapping: true,
-        controller: PageController(viewportFraction: 0.86),
+        controller: PageController(viewportFraction: 0.89),
         children: [
           // First Page
           Container(

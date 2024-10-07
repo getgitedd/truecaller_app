@@ -82,7 +82,7 @@ class _ContactScreenState extends State<ContactScreen> {
                     height: 15,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.red,
+                      color: Colors.blue,
                     ),
                     child: const Center(
                       child: Text(

@@ -6,6 +6,7 @@ import 'package:truecaller_app/view/listview_screen/listview1.dart';
 import 'package:truecaller_app/view/listview2_screen/listview2.dart';
 import 'package:truecaller_app/view/message_screen/messages_screen.dart';
 import 'package:truecaller_app/view/premium_screen/premium_screen.dart';
+import 'package:truecaller_app/view/search_screen/searchscreen.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -83,7 +84,7 @@ class HomeScreenContent extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 40),
-          _buildSearchField(),
+          _buildSearchField(context), // Pass context here
           const SizedBox(height: 20),
           _buildBoxUnder(),
           const SizedBox(height: 20),
@@ -104,10 +105,19 @@ class HomeScreenContent extends StatelessWidget {
     );
   }
 
-  static Widget _buildSearchField() {
+  static Widget _buildSearchField(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: TextField(
+        onTap: () {
+          // Navigate to SearchScreen when the TextField is tapped
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const SearchScreen(),
+            ),
+          );
+        },
         style: const TextStyle(color: Color.fromARGB(255, 32, 33, 37)),
         decoration: InputDecoration(
           prefixIcon: Container(
